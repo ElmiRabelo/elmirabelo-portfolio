@@ -27,3 +27,25 @@ $img-overlay-gradient: linear-gradient(
 @mixin textShadow($esp, $opct) {
   text-shadow: 0 0 $esp rgba(0, 0, 0, $opct);
 }
+
+//Media queries mixins
+@mixin mediaSmall {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaTablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaDesktop {
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    @content;
+  }
+}
+@mixin mediaLarge {
+  @media screen and (min-width: 1181px) {
+    @content;
+  }
+}

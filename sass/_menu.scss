@@ -108,6 +108,9 @@
     text-transform: uppercase;
     @include textShadow(5px, 0.3);
     position: relative;
+    &:hover {
+      color: $primary-color;
+    }
     &::before {
       content: "";
       position: absolute;

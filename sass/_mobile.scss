@@ -1,0 +1,56 @@
+//Widescreens
+@include mediaLarge {
+}
+
+//Normal size desktop screen
+@include mediaDesktop {
+}
+
+//tablets and small screens
+@include mediaTablet {
+  .menu {
+    &__nav,
+    &__info {
+      float: none;
+      width: 100%;
+      min-height: 0;
+    }
+    &__info {
+      height: 40%;
+      padding: 1rem 0;
+      transform: translate3d(0, -100%, 0);
+      opacity: 0.8;
+
+      .picture {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+    &__nav {
+      transform: translate3d(0, 100%, 0);
+      justify-content: flex-start;
+      padding-top: 30%;
+    }
+  }
+}
+
+//mobile
+@include mediaSmall {
+  #home {
+    padding: 0 1rem;
+    .main__heading {
+      font-size: 4.3rem;
+      letter-spacing: 0.4rem;
+    }
+    .sub-heading {
+      font-size: 1.2rem;
+    }
+    .icons {
+      font-size: 0.7rem;
+
+      i {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
