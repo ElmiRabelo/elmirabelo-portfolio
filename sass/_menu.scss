@@ -39,3 +39,83 @@
     }
   }
 }
+
+//overlay menu
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &__info,
+  &__nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__nav {
+    background-color: $primary-color;
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.4s ease;
+    opacity: 0.9;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  &__info {
+    background-color: darken($secondary-color, 5);
+    transform: translate3d(-100%, 0, 0);
+    transition: all 0.4s ease-in;
+    opacity: 0.96;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+    .picture {
+      height: 12rem;
+      width: 12rem;
+      background-image: url(../img/profile.jpg);
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      border: 4px solid $primary-color;
+      @include boxShadow(20px, 0.8);
+    }
+  }
+}
+
+.nav__item {
+  margin-bottom: 1rem;
+  transform: translate3d(600px, 0, 0);
+  transition: all 0.3s ease-in;
+  &.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .nav--link {
+    color: $light-color;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    @include textShadow(5px, 0.3);
+    &:hover {
+      color: $secondary-color;
+      transform: translateX(10px);
+    }
+  }
+}
+
+//Efeito de delay em cada nav item
+@for $x from 1 through 4 {
+  .nav__item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}

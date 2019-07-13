@@ -40,6 +40,125 @@
           transform: rotate(-45deg) translate(7px, -6px);
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+}
+
+.menu.show {
+  visibility: visible;
+}
+
+.menu__info, .menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu__nav {
+  background-color: #333;
+  list-style: none;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  opacity: 0.9;
+}
+
+.menu__nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu__info {
+  background-color: #f2621d;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0.96;
+}
+
+.menu__info.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu__info .picture {
+  height: 12rem;
+  width: 12rem;
+  background-image: url(../img/profile.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 4px solid #333;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.nav__item {
+  margin-bottom: 1rem;
+  -webkit-transform: translate3d(600px, 0, 0);
+          transform: translate3d(600px, 0, 0);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.nav__item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.nav__item .nav--link {
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav__item .nav--link:hover {
+  color: #f37335;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +170,7 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(17, 17, 17, 0.8)), to(rgba(17, 17, 17, 0.8))), url(../img/showcase-portfolio.jpg);
   background-image: linear-gradient(to right, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), url(../img/showcase-portfolio.jpg);
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

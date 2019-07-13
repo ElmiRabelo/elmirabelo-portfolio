@@ -1,5 +1,7 @@
 // --------->>> Colors Variables
 $hl-text-color: #f37335;
+$primary-color: #333;
+$secondary-color: #f37335;
 $light-color: #fff;
 
 // ----------->> Image Variables
@@ -15,6 +17,13 @@ $img-overlay-gradient: linear-gradient(
 @mixin background {
   background-image: $img-overlay-gradient, $home-image;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
+}
+
+@mixin boxShadow($esp, $opct) {
+  box-shadow: 0 0 $esp rgba(0, 0, 0, $opct);
+}
+@mixin textShadow($esp, $opct) {
+  text-shadow: 0 0 $esp rgba(0, 0, 0, $opct);
 }
