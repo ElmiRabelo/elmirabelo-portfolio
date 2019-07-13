@@ -1,3 +1,45 @@
+.menu__btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 5;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.menu__btn .btn__line {
+  width: 28px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.menu__btn:hover .btn__line {
+  background: #f37335;
+}
+
+.menu__btn.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu__btn.close .btn__line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 4px);
+          transform: rotate(45deg) translate(5px, 4px);
+}
+
+.menu__btn.close .btn__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu__btn.close .btn__line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+          transform: rotate(-45deg) translate(7px, -6px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +55,7 @@ body {
   background-attachment: fixed;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 h1,
@@ -28,7 +70,9 @@ h1.main__heading,
 h2.main__heading,
 h3.main__heading {
   font-size: 6rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.6rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
 }
 
 h1.sub-heading,
@@ -58,6 +102,7 @@ header {
 main {
   padding: 4.5rem;
   height: 100%;
+  text-align: center;
 }
 
 main .icons {
@@ -65,7 +110,7 @@ main .icons {
 }
 
 main .icons a {
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
 }
 
 main .icons a:visited {
