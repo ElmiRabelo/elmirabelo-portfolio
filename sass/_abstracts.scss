@@ -1,0 +1,20 @@
+// --------->>> Colors Variables
+$hl-text-color: #f37335;
+$light-color: #fff;
+
+// ----------->> Image Variables
+$home-image: url(../img/showcase-portfolio.jpg);
+$img-overlay-gradient: linear-gradient(
+  to right,
+  rgba(17, 17, 17, 0.8),
+  rgba(17, 17, 17, 0.8)
+);
+
+// ------>>> MIXINS
+
+@mixin background {
+  background-image: $img-overlay-gradient, $home-image;
+  background-position: top;
+  background-size: contain;
+  background-attachment: fixed;
+}

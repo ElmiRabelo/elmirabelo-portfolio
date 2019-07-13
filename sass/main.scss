@@ -1,0 +1,77 @@
+@import "abstracts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // color: #fff;
+  @include background;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  color: $light-color;
+
+  &.main__heading {
+    font-size: 6rem;
+    letter-spacing: 0.2rem;
+  }
+
+  &.sub-heading {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+    padding: 0 0.4rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $light-color;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.hl-text {
+  color: $hl-text-color;
+}
+
+main {
+  padding: 4.5rem;
+  height: 100%;
+  .icons {
+    margin-top: 0.8rem;
+
+    a {
+      padding: 0 1rem;
+
+      &:visited {
+        color: $light-color;
+      }
+      &:hover {
+        color: $hl-text-color;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
