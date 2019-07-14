@@ -15,21 +15,34 @@
       width: 100%;
       min-height: 0;
     }
+
     &__info {
       height: 40%;
       padding: 1rem 0;
       transform: translate3d(0, -100%, 0);
       opacity: 0.8;
+      // position: relative;
+      z-index: 1;
 
       .picture {
         height: 7rem;
         width: 7rem;
       }
     }
+
     &__nav {
       transform: translate3d(0, 100%, 0);
       justify-content: flex-start;
       padding-top: 30%;
+    }
+
+    &__btn {
+      z-index: 10;
+      &.close:hover {
+        .btn__line {
+          background: $primary-color;
+        }
+      }
     }
   }
 }
