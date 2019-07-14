@@ -1,5 +1,25 @@
 //Widescreens
 @include mediaLarge {
+  .menu__btn {
+    .btn__line {
+      width: 35px;
+      height: 4px;
+    }
+
+    //menu close effect
+    &.close {
+      .btn__line {
+        // line 1
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 4px);
+        }
+        //line 3
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(8px, -6px);
+        }
+      }
+    }
+  }
 }
 
 //Normal size desktop screen

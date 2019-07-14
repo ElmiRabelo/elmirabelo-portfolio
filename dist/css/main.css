@@ -204,6 +204,21 @@
           transition-delay: 0.4s;
 }
 
+@media screen and (min-width: 1181px) {
+  .menu__btn .btn__line {
+    width: 35px;
+    height: 4px;
+  }
+  .menu__btn.close .btn__line:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(5px, 4px);
+            transform: rotate(45deg) translate(5px, 4px);
+  }
+  .menu__btn.close .btn__line:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(8px, -6px);
+            transform: rotate(-45deg) translate(8px, -6px);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .menu__nav, .menu__info {
     float: none;
