@@ -4,11 +4,14 @@
   "description": "Portfolio Responsivo",
   "main": "index.js",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "sass": "^1.22.4"
   },
   "devDependencies": {},
+  "homepage": "https://elmirabelo.github.io/elmirabelo-portfolio/",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elmi Rabelo",
