@@ -1,0 +1,43 @@
+// resets and main styles
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  color: $light-color;
+}
+
+a {
+  text-decoration: none;
+  color: $light-color;
+}
+
+.hl-text {
+  color: $hl-text-color;
+}
+
+.main__heading {
+  font-size: 6rem;
+  letter-spacing: 0.6rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.sub-heading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.3rem;
+  padding: 0 0.4rem;
+}
+
+// typography about page
+#about {
+  .main__heading {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+  }
+  .sub-heading {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+}

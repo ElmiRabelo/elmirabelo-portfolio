@@ -1,0 +1,66 @@
+//----------------> reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // color: #fff;
+  @include background(0.9);
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+}
+
+//--------> header
+header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+
+// -----> main element for all pages
+main {
+  padding: 4.5rem;
+  height: 100%;
+  text-align: center;
+}
+
+// -- index page styles
+#home {
+  overflow: hidden;
+  h1 {
+    margin-top: 25vh;
+  }
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.5rem 1rem;
+
+      &:visited {
+        color: $light-color;
+      }
+      &:hover {
+        color: $hl-text-color;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+// About page
+#about {
+  display: grid;
+  grid-template-areas:
+    "bioimg bio bio"
+    "bioitem1 bioitem2 bioitem3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  &.sub-heading {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+}
