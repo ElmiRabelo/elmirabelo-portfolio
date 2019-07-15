@@ -1,4 +1,10 @@
 // resets and main styles
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  color: $light-color;
+}
+
 h1,
 h2,
 h3 {

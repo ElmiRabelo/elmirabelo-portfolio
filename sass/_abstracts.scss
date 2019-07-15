@@ -25,6 +25,9 @@ $home-image: url(../img/showcase-portfolio.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
+@mixin bg__dark--opct($opct) {
+  background-color: rgba(17, 17, 17, $opct);
+}
 
 @mixin boxShadow($esp, $opct) {
   box-shadow: 0 0 $esp rgba(0, 0, 0, $opct);

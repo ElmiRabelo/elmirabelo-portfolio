@@ -1,5 +1,6 @@
 //Widescreens
 @include mediaLarge {
+  //----> MENU
   .menu__btn {
     .btn__line {
       width: 35px;
@@ -28,6 +29,10 @@
 
 //tablets and small screens
 @include mediaTablet {
+  main {
+    padding: 2.3rem;
+  }
+  //---> menu on medium screens
   .menu {
     &__nav,
     &__info {
@@ -40,7 +45,7 @@
       height: 40%;
       padding: 1rem 0;
       transform: translate3d(0, -100%, 0);
-      opacity: 0.8;
+      opacity: 0.95;
       // position: relative;
       z-index: 1;
 
@@ -54,6 +59,7 @@
       transform: translate3d(0, 100%, 0);
       justify-content: flex-start;
       padding-top: 30%;
+      opacity: 0.97;
     }
 
     &__btn {
@@ -65,19 +71,30 @@
       }
     }
   }
+
+  //about page
+  .about__info {
+    margin-top: 4rem;
+    grid-template-areas:
+      "bioimg bioimg bioimg"
+      "bio bio bio"
+      "item1 item1 item1"
+      "item2 item2 item2";
+  }
 }
 
 //mobile
 @include mediaSmall {
+  .main__heading {
+    font-size: 4.3rem;
+    letter-spacing: 0.4rem;
+  }
+  .sub-heading {
+    font-size: 1.2rem;
+  }
+
   #home {
     padding: 0 1rem;
-    .main__heading {
-      font-size: 4.3rem;
-      letter-spacing: 0.4rem;
-    }
-    .sub-heading {
-      font-size: 1.2rem;
-    }
     .icons {
       font-size: 0.7rem;
 
