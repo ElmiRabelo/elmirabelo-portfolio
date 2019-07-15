@@ -86,8 +86,11 @@ main {
     grid-area: bio;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    p {
+      text-align: left;
+    }
   }
-  .bio--item {
+  .bio__box {
     margin-top: 4rem;
     padding: 1rem;
     min-height: 18rem;
@@ -95,6 +98,32 @@ main {
     border-bottom: 3px solid $secondary-color;
     @include bg__dark--opct(0.7);
     @include boxShadow(20px, 1);
+
+    &--container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 1rem;
+      & .bio__box--item {
+        margin: 0.8rem 0.3rem;
+
+        & i {
+          font-size: 2.5rem;
+          margin-bottom: 0.2rem;
+          @include textShadow(15px, 1);
+
+          &:hover {
+            color: $secondary-color;
+            transform: scale(1.2);
+            transition: all 0.4s ease;
+          }
+        }
+        & h4 {
+          font-size: 1.1rem;
+          letter-spacing: 0.1rem;
+          color: $secondary-color;
+        }
+      }
+    }
   }
   .item--1 {
     grid-area: item1;

@@ -80,6 +80,12 @@
       "bio bio bio"
       "item1 item1 item1"
       "item2 item2 item2";
+    .bio__box {
+      &--container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+    }
   }
 }
 
