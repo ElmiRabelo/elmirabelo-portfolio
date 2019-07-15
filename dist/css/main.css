@@ -37,13 +37,15 @@ a {
 }
 
 #about .main__heading,
-#portfolio .main__heading {
+#portfolio .main__heading,
+#contact .main__heading {
   font-size: 5rem;
   letter-spacing: 0.4rem;
 }
 
 #about .sub-heading,
-#portfolio .sub-heading {
+#portfolio .sub-heading,
+#contact .sub-heading {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
 }
@@ -286,7 +288,7 @@ main {
   padding: 4.5rem;
   height: 100%;
   text-align: center;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 1vh);
 }
 
 #home {
@@ -480,6 +482,58 @@ main {
   border: 2px solid #f37335;
 }
 
+#contact h1 {
+  margin-top: 10vh;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 5rem;
+}
+
+.contacts .contacts--item {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(17, 17, 17, 0.9);
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+  border-bottom: 4px solid #f37335;
+}
+
+.contacts .contacts--item i {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.contacts .contacts--item i:hover {
+  color: #f37335;
+}
+
+.contacts .contacts--item h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.contacts .contacts--item .contact--lead {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.contacts .contacts--item:hover {
+  border-color: #fff;
+}
+
 @media screen and (min-width: 1181px) {
   .menu__btn .btn__line {
     width: 35px;
@@ -543,6 +597,15 @@ main {
   .projects {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

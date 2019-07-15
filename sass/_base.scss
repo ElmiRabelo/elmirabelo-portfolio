@@ -27,7 +27,7 @@ main {
   padding: 4.5rem;
   height: 100%;
   text-align: center;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 1vh);
 }
 
 // -- index page styles
@@ -185,6 +185,47 @@ main {
     &:hover {
       opacity: 0.9;
       border: 2px solid $secondary-color;
+    }
+  }
+}
+
+//contact page
+#contact {
+  h1 {
+    margin-top: 10vh;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 5rem;
+  .contacts--item {
+    padding: 1rem;
+    margin: 1rem;
+    @include bg__dark--opct(0.9);
+    @include boxShadow(20px, 1);
+    border-bottom: 4px solid $secondary-color;
+    i {
+      display: inline-block;
+      margin-left: 12px;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+      margin-bottom: 0.7rem;
+    }
+    .contact--lead {
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+    &:hover {
+      border-color: $light-color;
     }
   }
 }
