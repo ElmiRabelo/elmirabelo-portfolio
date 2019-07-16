@@ -23,11 +23,15 @@ a {
   color: $hl-text-color;
 }
 
+main {
+  text-align: center;
+}
 .main__heading {
   font-size: 6rem;
   letter-spacing: 0.6rem;
   margin-bottom: 0.5rem;
   line-height: 1;
+  text-align: center;
 }
 
 .sub-heading {
@@ -35,6 +39,7 @@ a {
   margin-bottom: 2rem;
   letter-spacing: 0.3rem;
   padding: 0 0.4rem;
+  text-align: center;
 }
 
 // typography all pages
@@ -46,6 +51,83 @@ a {
     letter-spacing: 0.4rem;
   }
   .sub-heading {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+// ->>>>>>>>>>>>> about typography
+
+.about__info {
+  & h3 {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    @include textShadow(5px, 0.5);
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    p {
+      text-align: justify;
+    }
+  }
+  .bio__box {
+    .bio__box--item {
+      & i {
+        font-size: 2.5rem;
+        margin-bottom: 0.2rem;
+        @include textShadow(15px, 1);
+
+        &:hover {
+          color: $secondary-color;
+          transform: scale(1.2);
+          transition: all 0.4s ease;
+        }
+      }
+      & h4 {
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+// ->>>>>>>>>>>>> portfolio typography
+.projects {
+  .project--item {
+    .btn {
+      display: inline-block;
+      padding: 0.6rem;
+      font-size: 1.2rem;
+      i {
+        font-size: 1.5rem;
+        color: $secondary-color;
+      }
+      &:hover {
+        color: $secondary-color;
+        transition: all 0.5s ease;
+      }
+    }
+
+    .project--overview {
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+// ->>>>>>>>>>>>> portfolio typography
+.contacts {
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .contact--lead {
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
   }
