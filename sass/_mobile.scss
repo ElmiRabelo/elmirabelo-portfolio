@@ -29,6 +29,27 @@
 
 //tablets and small screens
 @include mediaTablet {
+  #home {
+    .main__heading {
+      margin-top: 30vh;
+      font-size: 4rem;
+    }
+    .sub-heading {
+      font-size: 1.2rem;
+    }
+  }
+  #about,
+  #portfolio,
+  #contact {
+    .main__heading {
+      font-size: 3.5rem;
+      letter-spacing: 0.1rem;
+    }
+    .sub-heading {
+      font-size: 1.1rem;
+    }
+  }
+
   main {
     padding: 2.3rem;
   }
@@ -103,12 +124,16 @@
 
 //mobile
 @include mediaSmall {
-  .main__heading {
-    font-size: 3.7rem;
-    letter-spacing: 0.2rem;
-  }
-  .sub-heading {
-    font-size: 1.2rem;
+  #about,
+  #portfolio,
+  #contact {
+    .main__heading {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+    .sub-heading {
+      font-size: 1.1rem;
+    }
   }
 
   #home {

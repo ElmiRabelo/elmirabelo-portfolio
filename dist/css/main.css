@@ -281,6 +281,7 @@ header {
 footer {
   text-align: center;
   padding: 0.8rem 0;
+  width: 100vw;
   background: #333;
 }
 
@@ -550,6 +551,24 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  #home .main__heading {
+    margin-top: 30vh;
+    font-size: 4rem;
+  }
+  #home .sub-heading {
+    font-size: 1.2rem;
+  }
+  #about .main__heading,
+  #portfolio .main__heading,
+  #contact .main__heading {
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+  #about .sub-heading,
+  #portfolio .sub-heading,
+  #contact .sub-heading {
+    font-size: 1.1rem;
+  }
   main {
     padding: 2.3rem;
   }
@@ -613,12 +632,16 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-  .main__heading {
-    font-size: 3.7rem;
+  #about .main__heading,
+  #portfolio .main__heading,
+  #contact .main__heading {
+    font-size: 2.5rem;
     letter-spacing: 0.2rem;
   }
-  .sub-heading {
-    font-size: 1.2rem;
+  #about .sub-heading,
+  #portfolio .sub-heading,
+  #contact .sub-heading {
+    font-size: 1.1rem;
   }
   #home {
     padding: 0 1rem;
