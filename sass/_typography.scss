@@ -22,7 +22,11 @@ a {
 .hl-text {
   color: $hl-text-color;
 }
-
+.hl__paragraph {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin: 0 0.8rem;
+}
 main {
   text-align: center;
 }
@@ -40,6 +44,31 @@ main {
   letter-spacing: 0.3rem;
   padding: 0 0.4rem;
   text-align: center;
+}
+
+// button
+.btn {
+  display: inline-block;
+  padding: 0.8rem;
+  margin: 0.7rem;
+  font-size: 1.2rem;
+  @include bg__dark--opct(1);
+  @include boxShadow(15px, 1);
+  border-left: 1px solid $secondary-color;
+  border-right: 1px solid $secondary-color;
+  i {
+    font-size: 1.5rem;
+    color: $secondary-color;
+  }
+  &:hover {
+    // color: $secondary-color;
+    i {
+      color: $light-color;
+    }
+    // transform: translateY(-2px);
+    transition: all 0.5s ease;
+    border-color: $light-color;
+  }
 }
 
 // typography all pages
@@ -75,6 +104,10 @@ main {
     }
   }
   .bio__box {
+    h3 {
+      margin-top: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
     .bio__box--item {
       & i {
         font-size: 2.5rem;
@@ -98,24 +131,11 @@ main {
 
 // ->>>>>>>>>>>>> portfolio typography
 .projects {
-  .project--item {
-    .btn {
-      display: inline-block;
-      padding: 0.6rem;
-      font-size: 1.2rem;
-      i {
-        font-size: 1.5rem;
-        color: $secondary-color;
-      }
-      &:hover {
-        color: $secondary-color;
-        transition: all 0.5s ease;
-      }
-    }
-
-    .project--overview {
-      font-size: 1.2rem;
-      letter-spacing: 0.1rem;
+  .project--overview {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    h3 {
+      margin-bottom: 0.4rem;
     }
   }
 }
