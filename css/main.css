@@ -506,13 +506,12 @@ main {
 
 .projects .project--item .project--overview {
   margin: 0.6rem auto;
-  padding: 1rem 0.8rem;
+  padding: 1.5rem 0.8rem;
   border-bottom: 4px solid #f37335;
   width: 90%;
   -webkit-box-shadow: 0 0 15px black;
           box-shadow: 0 0 15px black;
   background-color: rgba(17, 17, 17, 0.7);
-  height: 12rem;
 }
 
 .projects img {
