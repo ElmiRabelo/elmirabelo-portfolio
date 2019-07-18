@@ -22,11 +22,22 @@ a {
   color: #f37335;
 }
 
+.hl__paragraph {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin: 0 0.8rem;
+}
+
+main {
+  text-align: center;
+}
+
 .main__heading {
   font-size: 6rem;
   letter-spacing: 0.6rem;
   margin-bottom: 0.5rem;
   line-height: 1;
+  text-align: center;
 }
 
 .sub-heading {
@@ -34,6 +45,34 @@ a {
   margin-bottom: 2rem;
   letter-spacing: 0.3rem;
   padding: 0 0.4rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem;
+  margin: 0.7rem;
+  font-size: 1.2rem;
+  background-color: #111111;
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+  border-left: 1px solid #f37335;
+  border-right: 1px solid #f37335;
+}
+
+.btn i {
+  font-size: 1.5rem;
+  color: #f37335;
+}
+
+.btn:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-color: #fff;
+}
+
+.btn:hover i {
+  color: #fff;
 }
 
 #about .main__heading,
@@ -46,6 +85,71 @@ a {
 #about .sub-heading,
 #portfolio .sub-heading,
 #contact .sub-heading {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.about__info h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.about__info .bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.about__info .bio p {
+  text-align: justify;
+}
+
+.about__info .bio__box h3 {
+  margin-top: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.about__info .bio__box .bio__box--item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 0 15px black;
+}
+
+.about__info .bio__box .bio__box--item i:hover {
+  color: #f37335;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.about__info .bio__box .bio__box--item h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  color: #f37335;
+}
+
+.projects .project--overview {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.projects .project--overview h3 {
+  margin-bottom: 0.4rem;
+}
+
+.contacts h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.contacts .contact--lead {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
 }
@@ -270,6 +374,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -281,13 +386,13 @@ header {
 footer {
   text-align: center;
   padding: 0.8rem 0;
+  width: 100vw;
   background: #333;
 }
 
 main {
   padding: 4.5rem;
   height: 100%;
-  text-align: center;
   min-height: calc(100vh - 1vh);
 }
 
@@ -331,13 +436,6 @@ main {
   grid-gap: 2rem;
 }
 
-.about__info h3 {
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
 .about__info .bio--image {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -351,19 +449,6 @@ main {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-}
-
-.about__info .bio {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: bio;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.about__info .bio p {
-  text-align: left;
 }
 
 .about__info .bio__box {
@@ -387,26 +472,6 @@ main {
 
 .about__info .bio__box--container .bio__box--item {
   margin: 0.8rem 0.3rem;
-}
-
-.about__info .bio__box--container .bio__box--item i {
-  font-size: 2.5rem;
-  margin-bottom: 0.2rem;
-  text-shadow: 0 0 15px black;
-}
-
-.about__info .bio__box--container .bio__box--item i:hover {
-  color: #f37335;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.about__info .bio__box--container .bio__box--item h4 {
-  font-size: 1.1rem;
-  letter-spacing: 0.1rem;
-  color: #f37335;
 }
 
 .about__info .item--1 {
@@ -439,33 +504,15 @@ main {
   margin-bottom: 1.2rem;
 }
 
-.projects .project--item .btn {
-  display: inline-block;
-  padding: 0.6rem;
-  font-size: 1.2rem;
-}
-
-.projects .project--item .btn i {
-  font-size: 1.5rem;
-  color: #f37335;
-}
-
-.projects .project--item .btn:hover {
-  color: #f37335;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 .projects .project--item .project--overview {
   margin: 0.6rem auto;
   padding: 1rem 0.8rem;
   border-bottom: 4px solid #f37335;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
   width: 90%;
   -webkit-box-shadow: 0 0 15px black;
           box-shadow: 0 0 15px black;
   background-color: rgba(17, 17, 17, 0.7);
+  height: 12rem;
 }
 
 .projects img {
@@ -519,17 +566,6 @@ main {
   color: #f37335;
 }
 
-.contacts .contacts--item h3 {
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
-  margin-bottom: 0.7rem;
-}
-
-.contacts .contacts--item .contact--lead {
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-}
-
 .contacts .contacts--item:hover {
   border-color: #fff;
 }
@@ -550,6 +586,24 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  #home .main__heading {
+    margin-top: 30vh;
+    font-size: 4rem;
+  }
+  #home .sub-heading {
+    font-size: 1.2rem;
+  }
+  #about .main__heading,
+  #portfolio .main__heading,
+  #contact .main__heading {
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+  #about .sub-heading,
+  #portfolio .sub-heading,
+  #contact .sub-heading {
+    font-size: 1.1rem;
+  }
   main {
     padding: 2.3rem;
   }
@@ -613,12 +667,16 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-  .main__heading {
-    font-size: 4.3rem;
-    letter-spacing: 0.4rem;
+  #about .main__heading,
+  #portfolio .main__heading,
+  #contact .main__heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
   }
-  .sub-heading {
-    font-size: 1.2rem;
+  #about .sub-heading,
+  #portfolio .sub-heading,
+  #contact .sub-heading {
+    font-size: 1.1rem;
   }
   #home {
     padding: 0 1rem;
