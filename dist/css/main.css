@@ -268,6 +268,18 @@ main {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
+.menu__info .icons {
+  margin-top: 2rem;
+}
+
+.menu__info .icons i {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu__info .icons a:hover {
+  color: #333;
+}
+
 .nav__item {
   margin-bottom: 1rem;
   -webkit-transform: translate3d(600px, 0, 0);
@@ -404,19 +416,19 @@ main {
   margin-top: 25vh;
 }
 
-#home .icons {
+.icons {
   margin-top: 1rem;
 }
 
-#home .icons a {
+.icons a {
   padding: 0.5rem 1rem;
 }
 
-#home .icons a:visited {
+.icons a:visited {
   color: #fff;
 }
 
-#home .icons a:hover {
+.icons a:hover {
   color: #f37335;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;

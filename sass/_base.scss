@@ -37,19 +37,20 @@ main {
   h1 {
     margin-top: 25vh;
   }
-  .icons {
-    margin-top: 1rem;
+}
+// Div de Icons utilizados na homepage e abaixo da imagem do menu
+.icons {
+  margin-top: 1rem;
 
-    a {
-      padding: 0.5rem 1rem;
+  a {
+    padding: 0.5rem 1rem;
 
-      &:visited {
-        color: $light-color;
-      }
-      &:hover {
-        color: $hl-text-color;
-        transition: all 0.3s ease;
-      }
+    &:visited {
+      color: $light-color;
+    }
+    &:hover {
+      color: $hl-text-color;
+      transition: all 0.3s ease;
     }
   }
 }
