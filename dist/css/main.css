@@ -256,6 +256,10 @@ main {
           box-shadow: 0 0 20px black;
 }
 
+.about__info .bio__box h3 {
+  margin-bottom: 0.5rem;
+}
+
 .about__info .bio__box--container {
   display: -ms-grid;
   display: grid;
@@ -699,3 +703,4 @@ main {
     margin-bottom: 1rem;
   }
 }
+/*# sourceMappingURL=main.css.map */
