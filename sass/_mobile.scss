@@ -1,5 +1,72 @@
 //Widescreens
 @include mediaLarge {
+  // ----> Fonts Size
+  .hl__paragraph {
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    margin: 0 0.9rem;
+  }
+
+  .main__heading {
+    font-size: 7rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // typography all pages
+  #about,
+  #portfolio,
+  #contact {
+    .main__heading {
+      font-size: 6rem;
+    }
+    .sub-heading {
+      font-size: 1.4rem;
+    }
+  }
+
+  // ->>>>>>>>>>>>> about typography
+  .about__info {
+    & h3 {
+      font-size: 2rem;
+    }
+
+    .bio {
+      font-size: 1.3rem;
+    }
+    .bio__box {
+      .bio__box--item {
+        & i {
+          font-size: 2.6rem;
+        }
+        & h4 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // ->>>>>>>>>>>>> portfolio typography
+  .projects {
+    .project--overview {
+      font-size: 1.3rem;
+    }
+  }
+
+  // ->>>>>>>>>>>>> contacts typography
+  .contacts {
+    h3 {
+      font-size: 1.7rem;
+    }
+    .contact--lead {
+      font-size: 1.4rem;
+    }
+  }
   //----> MENU
   .menu__btn {
     .btn__line {
